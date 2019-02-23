@@ -84,7 +84,7 @@ INNER JOIN (
 	FROM EntDBO.Business_Associates BUS_ASC
 	--Need to match with separate matching database between person ID and client ID
 	LEFT JOIN EntDBO.ID_Business_ID_Match MATCH_DB
-	ON BUS_ASC.Person_ID = MATCH_DB.ID
+	ON BUS_ASC.Primary_ID = MATCH_DB.ID
 ) BUS_ASC_DETAILS
 ON BUS_DIR.ID = BUS_ASC_DETAILS.Primary_ID
 WHERE
